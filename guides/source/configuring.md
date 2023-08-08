@@ -3043,7 +3043,7 @@ development:
   adapter: sqlite3
   database: storage/development.sqlite3
   pool: 5
-  timeout: 5000
+  checkout_timeout: 5
 ```
 
 NOTE: Rails uses an SQLite3 database for data storage by default because it is a zero configuration database that just works. Rails also supports MySQL (including MariaDB) and PostgreSQL "out of the box", and has plugins for many database systems. If you are using a database in a production environment Rails most likely has an adapter for it.
@@ -3501,7 +3501,7 @@ development:
   adapter: sqlite3
   database: storage/development.sqlite3
   pool: 5
-  timeout: 5000
+  checkout_timeout: 5
 ```
 
 Since the connection pooling is handled inside of Active Record by default, all application servers (Thin, Puma, Unicorn, etc.) should behave the same. The database connection pool is initially empty. As demand for connections increases it will create them until it reaches the connection pool limit.

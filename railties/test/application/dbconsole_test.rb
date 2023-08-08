@@ -24,7 +24,7 @@ module ApplicationTests
            database: <%= Rails.application.config.database %>
            adapter: sqlite3
            pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-           timeout: 5000
+           checkout_timeout: 5
       YAML
 
       app_file "config/environments/development.rb", <<-RUBY
@@ -45,7 +45,7 @@ module ApplicationTests
         default: &default
           adapter: sqlite3
           pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-          timeout: 5000
+          checkout_timeout: 5
 
         development:
           <<: *default

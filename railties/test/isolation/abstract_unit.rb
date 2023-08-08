@@ -152,7 +152,7 @@ module TestHelpers
         default: &default
           adapter: sqlite3
           pool: 5
-          timeout: 5000
+          checkout_timeout: 5
         development:
           <<: *default
           database: storage/development.sqlite3
@@ -170,7 +170,7 @@ module TestHelpers
         default: &default
           adapter: sqlite3
           pool: 5
-          timeout: 5000
+          checkout_timeout: 5
           variables:
             statement_timeout: 1000
         development:

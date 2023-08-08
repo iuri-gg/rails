@@ -425,7 +425,7 @@ module ApplicationTests
             default: &default
               adapter: sqlite3
               pool: 5
-              timeout: 5000
+              checkout_timeout: 5
               variables:
                 statement_timeout: 1000
             development:
@@ -458,7 +458,7 @@ module ApplicationTests
             default: &default
               adapter: sqlite3
               pool: 5
-              timeout: 5000
+              checkout_timeout: 5
               variables:
                 statement_timeout: 1000
             development:
